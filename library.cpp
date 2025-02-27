@@ -1,419 +1,318 @@
 #include <iomanip>
 #include <iostream>
 #include <vector>
-using namespace std;
-int main() {
-    //problem   1
-    // int sum_for = 0;
-    // for (int i = 1; i <= 100; i++) {
-    //     sum_for += i;
-    // }
-    // cout << "Sum of first 100 natural numbers (for loop): " << sum_for << endl;
-    //
-    // // b. Sum of up to a given positive integer n using a while loop
-    // int n;
-    // cout << "Enter a positive integer n: ";
-    // cin >> n;
-    //
-    // if (n <= 0) {
-    //     cout << "Please enter a positive integer." << endl;
-    //     return 1; // Indicate an error
-    // }
-    //
-    // int sum_while = 0;
-    // int i = 1;
-    // while (i <= n) {
-    //     sum_while += i;
-    //     i++;
-    // }
-    // cout << "Sum of first " << n << " natural numbers (while loop): " << sum_while << endl;
+#include <string>
+   using namespace std;
+// const double pi = 3.141592653589793;
+// double area(double r)
+// {return pi * r * r;
+// }
+// double circumference(double r)
+// {return 2*pi * r;
+// }
+// double volume(double r)
+//  {return 4/3 *pi * r*r*r;}
+//
+// int main() {
+// double r;
+// cout << "Enter the radius of the circle: ";
+// cin >> r;
+// if (r<0){ cout << "Invalid input" << endl; return 1; }
+// cout << "Area of the circle: " << area(r) << endl;
+// cout << "Volume of the sphere: " << volume(r) << endl;
+// cout << "Sircumference of the circle: " << circumference(r) << endl;
 
 
 
-    //problem 2
-    // bool isPrime(int num) {
-    //     if (num <= 1) return false;
-    //     for (int i = 2; i * i <= num; i++) {
-    //         if (num % i == 0) return false;
-    //     }
-    //     return true;
+
+
+//problem   14
+
+    // Function declaration
+    // void welcomeMessage() {
+    //     std::cout << "Welcome to the C++ programming world!" << std::endl;
     // }
-    //
     // int main() {
-    //     // a.
-    //     cout << "First 10 prime numbers (for loop):" << endl;
-    //     int count = 0;
-    //     for (int num = 2; count < 10; num++) {
-    //         if (isPrime(num)) {
-    //             cout << num << " ";
-    //             count++;
-    //         }
-    //     }
-    //     cout << endl;
-    //
-    //     // b.
-    //     int n;
-    //     cout << "Enter the number of prime numbers to display (n): ";
-    //     cin >> n;
-    //
-    //     if (n <= 0) {
-    //         cout << "Please enter a positive integer." << endl;
-    //         return 1;
-    //     }
-    //
-    //     cout << "First " << n << " prime numbers (while loop):" << endl;
-    //     count = 0;
-    //     int num = 2;
-    //     while (count < n) {
-    //         if (isPrime(num)) {
-    //             cout << num << " ";
-    //             count++;
-    //         }
-    //         num++;
-    //     }
-    //     cout << endl;
+    //     welcomeMessage();
+
+//problem 15
+
+        // void greetUser() {
+        //     std::string name;
+        //     std::cout << "Please enter your name: ";
+        //     std::getline(std::cin, name);
+        //     std::cout << "Hello, " << name << "!" << std::endl;
+        // }
+        //  int main() {
+        //     greetUser();
+
+
+//problem 16
+
+// int maxNumber(int a, int b) {
+//     return (a > b) ? a : b;
+// }
+// int main() {
+//     int num1, num2;
+//     std::cout << "Enter two integers: ";
+//     std::cin >> num1 >> num2;
+//     int maxNum = maxNumber(num1, num2);
+//     std::cout << "The larger number is: " << maxNum << std::endl;
+
+
+//problem 17
+
+// long long factorial(int n) {
+//     if (n < 0) return -1;
+//     long long res = 1;
+//     for (int i = 2; i <= n; ++i) res *= i;
+//     return res;
+// }
+// int main() {
+//     int n;
+//     cout << "Enter a number to find its factorial: ";
+//     std::cin >> n;
+//     long long f = factorial(n);
+//     if (f == -1) std::cout << "Error";
+//     else std::cout << f;
+
+//problem 18
+
+// void printRectangle(int width, int height) {
+//     if (width <= 0 || height <= 0) {
+//         cout << "Width and height must be positive integers." << endl;
+//         return;
+//     }
+//      for (int i = 0; i < height; ++i) {
+//         for (int j = 0; j < width; ++j) {
+//             cout << "*";
+//         }
+//         cout << endl;
+//    }
+// }
+// int main() {
+//     int width, height;
+//     cout << "Enter the width of the rectangle: ";
+//     cin >> width;
+//      cout << "Enter the height of the rectangle: ";
+//     cin >> height;
+//     printRectangle(width, height);
 
 
 
 
-    //problem 3
-    // int n;
-    // cout << "Enter a positive integer n: ";
-    // cin >> n;
-    //
-    // if (n <= 0) {
-    //     cout << "Please enter a positive integer." << endl;
-    //     return 1;
-    // }
-    //
-    // cout << "Collatz sequence for " << n << ": " << endl;
-    //
-    // while (n != 1) {
-    //     cout << n << " ";
-    //     if (n % 2 == 0) {
-    //         n = n / 2;
-    //     } else {
-    //         n = 3 * n + 1;
-    //     }
-    // }
-    // cout << 1 << endl;
 
+//problem 1
+// double calc(int p, int b, int s) { return p * 10.0 + b * 8.0 + s * 5.0; }
+// int main() {
+//     int c, q, p = 0, b = 0, s = 0;
+//     do {
+//         cout << "\n1. Pizza $10\n2. Burger $8\n3. Salad $5\n4. Bill\n5. Exit\n";
+//         cin >> c;
+//         switch (c) {
+//             case 1: cout << "Qty: "; cin >> q; p += q; break;
+//             case 2: cout << "Qty: "; cin >> q; b += q; break;
+//             case 3: cout << "Qty: "; cin >> q; s += q; break;
+//             case 4:
+//                 cout << fixed << setprecision(2) << "\nPizza: " << p << " x $10 = $" << p * 10.0
+//                      << "\nBurger: " << b << " x $8 = $" << b * 8.0
+//                      << "\nSalad: " << s << " x $5 = $" << s * 5.0
+//                      << "\nTotal: $" << calc(p, b, s) << endl;
+//             p = b = s = 0;
+//             break;
+//             case 5: cout << "Bye!\n"; break;
+//             default: cout << "Invalid.\n";
+//         }
+//     } while (c != 5);
+
+
+//problem 2
+// double calculateParkingFee(int hours) {
+//     if (hours <= 2) {
+//         return 0.0;
+//     }
+//     if (hours <= 5) {
+//         return (hours - 2) * 2.0;
+//     }
+//     return 3 * 2.0 + (hours - 5) * 5.0;
+// }
+// int main() {
+//     int hours;
+//     char continueParking = 'y';
+//      while (continueParking == 'y' || continueParking == 'Y') {
+//         cout << "Enter the number of hours parked: ";
+//         cin >> hours;
+//          double fee = calculateParkingFee(hours);
+//         cout << "Parking fee: $" << fee << endl;
+//         cout << "Calculate fee for another user? (y/n): ";
+//         cin >> continueParking;
+//     }
+
+
+
+//problem 3
+// double balance = 500;
+//
+// void deposit(double amount) { balance += amount; }
+// void withdraw(double amount) { if (amount <= balance) balance -= amount; else cout << "Insufficient funds\n"; }
+// void showBalance() { cout << "Balance: $" << fixed << setprecision(2) << balance << endl; }
+//
+// int main() {
+//     int choice;
+//     double amount;
+//      do {
+//         cout << "1. Deposit, 2. Withdraw, 3. Balance, 4. Exit: ";
+//         cin >> choice;
+//             switch (choice) {
+//             case 1: cin >> amount; deposit(amount); break;
+//             case 2: cin >> amount; withdraw(amount); break;
+//             case 3: showBalance(); break;
+//             case 4: cout << "Exiting\n"; break;
+//             default: cout << "Invalid choice\n";
+//         }
+//     } while (choice != 4);
 
 
 //problem 4
-    // int n;
-    // cout << "Enter a positive integer n: ";
-    // cin >> n;
-    //
-    // if (n <= 0) {
-    //     cout << "Please enter a positive integer." << endl;
-    //     return 1;
-    // }
-    // int count = 0;
-    // while (n > 0) {
-    //     n = n / 10;
-    //     count++;
-    // }
-    //
-    // cout << "Number of digits in n: " << count << endl;
 
+// double calculatePrice(int movieChoice, int numTickets) {
+//     switch (movieChoice) {
+//         case 1: return numTickets * 8.0;
+//         case 2: return numTickets * 10.0;
+//         case 3: return numTickets * 12.0;
+//         default: return 0.0;
+//     }
+// }
+// int main() {
+//     int movieChoice, numTickets;
+//     double totalPrice;
+//     char continueBooking;
+//     do {
+//         cout << "\n--- Movie Ticket Booking ---" << endl;
+//         cout << "1. Movie A: $8" << endl;
+//         cout << "2. Movie B: $10" << endl;
+//         cout << "3. Movie C: $12" << endl;
+//         cout << "Enter movie choice: ";
+//         cin >> movieChoice;
+//
+//         cout << "Enter number of tickets: ";
+//         cin >> numTickets;
+//
+//         totalPrice = calculatePrice(movieChoice, numTickets);
+//
+//         if (totalPrice > 0) {
+//             cout << "Total price: $" << totalPrice << endl;
+//         } else {
+//             cout << "Invalid movie choice." << endl;
+//         }
+//
+//         cout << "Book another ticket? (yes/no): ";
+//         cin >> continueBooking;
+//
+//     } while (continueBooking == 'y' || continueBooking == 'Y');
+//
+//     cout << "Thank you for booking!" << endl;
 
 
 
 //problem 5
+// double calculatePrice(int trainChoice, int numTickets)
+//    {
+//       switch (trainChoice) {
+//        case 1: return numTickets * 15.0;
+//        case 2: return numTickets * 20.0;
+//        case 3: return numTickets * 25.0;
+//        default: return 0.0;  }
+// }
+//    int main()
+// {
+//       int trainChoice, numTickets;
+//       double totalPrice;
+//       char continueBooking;
+//       do {
+//          cout << "\n--- Train Ticket Booking ---" << endl;
+//          cout << "1. Train X: $15" << endl;
+//          cout << "2. Train Y: $20" << endl;
+//          cout << "3. Train Z: $25" << endl;
+// cout << "Enter Train Choice: ";
+// cin >> trainChoice;
+// cout << "Enter Number of Tickets: ";
+// cin >> numTickets;
+// totalPrice = calculatePrice(trainChoice, numTickets);
+// cout << "Total Price: " << totalPrice << endl;
+// cout << " Book another tickets:? (Y/N)";
+// cin >> continueBooking; }
+// while (continueBooking == 'Y' || continueBooking == 'y');
+// cout << " Thank you for booking " << endl;
 
-    // int n;
-    // cout << "Enter a positive integer n: ";
-    // cin >> n;
-    //
-    // if (n <= 0) {
-    //     cout << "Please enter a positive integer." << endl;
-    //     return 1;
-    // }
-    // cout << "Digits of n from right to left: " << endl;
-    //
-    // while (n > 0) {
-    //     int lastDigit = n % 10;
-    //     cout << lastDigit << " ";
-    //     n = n / 10;
-    // }
-    // cout << endl;
 
 
 //problem 6
 
-
-
-        // int gcd(int 'a', int 'b');
-        //     if ('a' <= 0 || 'b' <= 0) {
-        //         cout << "Please enter two positive integers." << endl;
-        //         return 1;
-        //     }
-        //     while ('b' != 0) {
-        //         int remainder = 'a' % 'b';
-        //         'a' == "b";
-        //         'b= remainder;
-        //     }
-        //     return 'a';
-        // }
-        //
-        // int main() {
-        //     int num1, num2;
-        //
-        //     cout << "Enter the first positive integer: ";
-        //     cin >> num1;
-        //
-        //     cout << "Enter the second positive integer: ";
-        //     cin >> num2;
-        //
-        //     int result = gcd(num1, num2);
-        //
-        //     if (result != -1) {
-        //         cout << "The GCD of " << num1 << " and " << num2 << " is: " << result << endl;
-        //     }
-
-
-
-    //problem 7
-    // int sum = 0;
-    // int count = 0;
-    //
-    // while (sum <= 100) {
-    //     int num;
-    //     cout << "Enter a number: ";
-    //     cin >> num;
-    //     sum += num;
-    //     count++;
-    //
-    //     if (sum > 100) {
-    //         cout << "Sum exceeded 100! ";
-    //         sum -= num;
-    //         count--;
-    //         break;
-    //     }
-    // }
-    // cout << "Total sum: " << sum << " Total numbers entered: " << count << endl;
-
-
-
-//problem 8
-    // double balance = 500.0;
-    //
-    // cout << fixed << setprecision(2);
-    //
-    // while (balance > 0) {
-    //     cout << "Your balance: $" << balance << endl;
-    //     double withdrawal;
-    //     cout << "Enter withdrawal amount (or 0 to cancel): ";
-    //     cin >> withdrawal;
-    //
-    //     if (withdrawal == 0) {
-    //         break;
-    //     } else if (withdrawal > balance) {
-    //         cout << "Insufficient funds!" << endl;
-    //     } else {
-    //         balance -= withdrawal;
-    //         cout << "Remaining balance: $" << balance << endl;
-    //     }
-    // }
-    //
-    // if (balance == 0) {
-    //     cout << "Account balance is zero. Thank you!" << endl;
-    // }
-
-
-
-//problem 9
-    // char input;
-    //
-    // do {
-    //     cout << "Enter 'Y' or 'N': ";
-    //     cin >> input;
-    //     input = tolower(input);
-    //
-    //     if (input != 'y' && input != 'n') {
-    //         cout << "Invalid input. Please enter 'Y' or 'N'." << endl;
-    //     }
-    // } while (input != 'y' && input != 'n');
-    //
-    // cout << "Valid input received: " << input << endl;
-
-
-//problem 10
-
-    // double balance = 1000.0;
-    // int choice;
-    // cout << fixed << setprecision(2);
-    // do {
-    //     cout << "\nATM Menu" << endl;
-    //     cout << "1. Check Balance" << endl;
-    //     cout << "2. Deposit" << endl;
-    //     cout << "3. Withdraw" << endl;
-    //     cout << "4. Exit" << endl;
-    //     cout << "Enter your choice: ";
-    //     cin >> choice;
-    //
-    //     switch (choice) {
-    //         case 1:
-    //             cout << "Your balance: $" << balance << endl;
-    //             break;
-    //         case 2: {
-    //             double deposit;
-    //             cout << "Enter deposit amount: ";
-    //             cin >> deposit;
-    //             if (deposit > 0) {
-    //                 balance += deposit;
-    //                 cout << "Deposit successful. New balance: $" << balance << endl;
-    //             } else {
-    //                 cout << "Invalid deposit amount." << endl;
-    //             }
-    //             break;
-    //         }
-    //         case 3: {
-    //             double withdrawal;
-    //             cout << "Enter withdrawal amount: ";
-    //             cin >> withdrawal;
-    //             if (withdrawal > 0) {
-    //                 if (withdrawal <= balance) {
-    //                     balance -= withdrawal;
-    //                     cout << "Withdrawal successful. Remaining balance: $" << balance << endl;
-    //                 } else {
-    //                     cout << "Insufficient funds!" << endl;
-    //                 }
-    //             } else {
-    //                 cout << "Invalid withdrawal amount." << endl;
-    //             }
-    //             break;
-    //         }
-    //         case 4:
-    //             cout << "Thank you for using the ATM." << endl;
-    //             break;
-    //         default:
-    //             cout << "Invalid choice. Please try again." << endl;
-    //     }
-    // } while (choice != 4);
-
-
-
-//problem 11
-// int choice;
-//     double num1, num2, result;
+// void check(string p) {
+//     bool u = 0, l = 0, d = 0, s = 0;
+//     if (p.size() < 8) { cout << "Weak: Length\n"; return; }
+//     for (char c : p) {
+//         if (isupper(c)) u = 1;
+//         if (islower(c)) l = 1;
+//         if (isdigit(c)) d = 1;
+//         if (strchr("!@#$%^&*()_+=-`~[]{};':\",.<>/?|\\", c)) s = 1;
+//     }
+//     if (u && l && d && s) cout << "Strong\n";
+//     else {
+//         cout << "Weak:";
+//         if (!u) cout << " Upper";
+//         if (!l) cout << " Lower";
+//         if (!d) cout << " Digit";
+//         if (!s) cout << " Symbol";
+//         cout << endl;
+//     }
+// }
 //
-//     cout << fixed << setprecision(2);
-//
-//     do {
-//         cout << "\nMenu-Driven Calculator" << endl;
-//         cout << "1. Addition" << endl;
-//         cout << "2. Subtraction" << endl;
-//         cout << "3. Multiplication" << endl;
-//         cout << "4. Division" << endl;
-//         cout << "5. Square Root" << endl;
-//         cout << "6. Power" << endl;
-//         cout << "7. Exit" << endl;
-//         cout << "Enter your choice: ";
-//         cin >> choice;
-//
-//         if (choice >= 1 && choice <= 4) {
-//             cout << "Enter number 1: ";
-//             cin >> num1;
-//             cout << "Enter number 2: ";
-//             cin >> num2;
-//         } else if (choice == 5) {
-//            cout << "Enter number 1: ";
-//             cin >> num1;
-//         } else if (choice == 6){
-//             cout << "Enter number 1: ";
-//             cin >> num1;
-//             cout << "Enter number 2: ";
-//             cin >> num2;
-//         }
-//
-//         switch (choice) {
-//             case 1:
-//                 result = num1 + num2;
-//                 cout << "Result: " << result << endl;
-//                 break;
-//             case 2:
-//                 result = num1 - num2;
-//                 cout << "Result: " << result << endl;
-//                 break;
-//             case 3:
-//                 result = num1 * num2;
-//                 cout << "Result: " << result << endl;
-//                 break;
-//             case 4:
-//                 if (num2 != 0) {
-//                     result = num1 / num2;
-//                     cout << "Result: " << result << endl;
-//                 } else {
-//                     cout << "Division by zero is not allowed." << endl;
-//                 }
-//                 break;
-//             case 5:
-//                 if (num1 >= 0) {
-//                     result = sqrt(num1);
-//                     cout << "Result: " << result << endl;
-//                 } else {
-//                     cout << "Square root of a negative number is not allowed." << endl;
-//                 }
-//                 break;
-//             case 6:
-//                 result = pow(num1, num2);
-//                 cout << "Result: " << result << endl;
-//                 break;
-//             case 7:
-//                 cout << "Thank you for using the calculator." << endl;
-//                 break;
-//             default:
-//                 cout << "Invalid choice. Please try again." << endl;
-//         }
-    // } while (choice != 7);
+// int main() {
+//     string p;
+//     cout << "Password: ";
+//     getline(cin, p);
+//     check(p);
 
 
 
-    //problem 12
-//     const int stored_Pass = 1234;
-//     int entered_Passw;
-//     int attempts = 0;
-// do {
-//     cout<< "Enter password (numeric only): ";
-//     cin >> entered_Passw;
-//     if (entered_Passw == stored_Pass) {
-//         {
-//             cout << "Welcome" << endl;
-//             return 1;
-//         }
-//         if (attempts % 2 == 0) {
-//             cout << "Invalid Password" << endl;
-//             attempts++;
+//problem 7
+
+// bool leap(int year) { return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); }
+//
+// bool valid(int day, int month, int year) {
+//     if (month < 1,month > 12, day < 1) return false;
+//     int days[] = {0, 31, leap(year) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+//     return day <= days[month];
+// }
+//
+// void next(int &d, int &m, int &y) {
+//     int days[] = {0, 31, leap(y) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+//     if (++d > days[m]) {
+//         d = 1;
+//         if (++m > 12) {
+//             m = 1;
+//             y++;
 //         }
 //     }
-//     while (attempts < 3);
-//     cout << "Limit exceeded" << endl;
-}
-
-
-
-    //problem 13
-// int guess;
-//     int attempts = 0;
-//     cout << "Welcome to the Guessing Game!" << endl;
-// do {
-//         cout << "Guess: ";
-//         cin >> guess;
-//         attempts++;
-//     if (cin.fail()) {
-//             cout << "Invalid input. Please enter a number." << endl;
-//             cin.clear();
-//             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-//         } else if (guess < secretNumber) {
-//             cout << "Too low" << endl;
-//         } else if (guess > secretNumber) {
-//             cout << "Too high" << endl;
-//         } else {
-//             cout << "Correct!" << endl;
-//         }
-//
-//
-//     return 0;
 // }
+//
+// int main() {
+//     int d, m, y;
+//     char again;
+//     do {
+//         cout << "Please enter day, month, year: ";
+//         cin >> d >> m >> y;
+//         if (valid(d, m, y)) {
+//             cout << "Valid. ";
+//             next(d, m, y);
+//             cout << "Next: " << d << " " << m << " " << y << endl;
+//         } else {
+//             cout << "Invalid\n";
+//         }
+//         cout << "Again? (y/n): ";
+//         cin >> again;
+//     } while (again == 'y' || again == 'Y');
+return 0;
+ }
