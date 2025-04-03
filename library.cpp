@@ -111,9 +111,9 @@
     // int b;
     // int *ptrA;
     // int *ptrB;
-    // std::cout << "Enter the value for integer 'a': ";
+    // std::cout << "Enter  value for 'a': ";
     // std::cin >> a;
-    // std::cout << "Enter the value for integer 'b': ";
+    // std::cout << "Enter  value for 'b': ";
     // std::cin >> b;
     // ptrB = &b;
     // std::cout << "\nValue pointed to by ptrA: " << *ptrA << std::endl;
